@@ -1,0 +1,466 @@
+body {
+    color: whitesmoke;
+    /* background-image: url(../img/test_.jpg);
+    background-repeat: no-repeat; */
+    background-color: black;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    min-height: 100vh;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+}
+p {
+  line-height: 1.5em;
+}
+footer {
+  grid-area: footer;
+  padding: 20px 0;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.textArea {
+  padding: 0 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+h1{
+    font-size: 45px;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 30px 0 0;
+    margin-bottom: 5px;
+}
+h3{
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+h4{
+font-size: 2em;
+}
+
+/* 余白調整 */
+.mt10 {
+  margin-top: 10px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+.mb30 {
+  margin-bottom: 30px;
+}
+.txtgray {
+  color: #3c3c3c;
+}
+
+/* heder　topエリア */
+header {
+    /* text-align: center; */
+    margin-bottom: 40px;
+}
+#top {
+  color: whitesmoke;
+  background-color: black;
+  /* max-width: 1200px; */
+  margin: 60px auto 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
+  position: relative;
+}
+#top img {
+  width: 100%;
+  min-width: 300px;
+}
+#topText{
+  padding: 40px 40px;
+  background-color: white;
+  color: #3c3c3c;
+}
+#top h1{
+  font-size: 16px;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin-bottom: 1em;
+  line-height: initial;
+}
+#top h2{
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  font-weight: bold;
+  line-height: initial;
+  color: white;
+}
+
+/* BEAM SHOTエリア */
+#imgBox {
+  background-color: black;
+    position: relative;
+    z-index: 1;
+    padding: 60px 0;
+}
+.textArea small{
+  font-size: 0.7em;
+  font-weight: normal;
+  display: block;
+}
+#left {
+  position: fixed;
+  left: 0px;
+  top: 150px;
+  z-index: 2;
+  text-align: left;
+}
+#right {
+  position: fixed;
+  right: 0px;
+  top: 150px;
+  z-index: 2;
+  text-align: right;
+}
+#beamShotImg {
+  max-width: 100%;
+}
+label {
+  cursor: pointer;
+  background-color: rgba(44, 44, 44, 0.562);
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 13px;
+}
+label:hover {
+  outline: solid 1px aliceblue;
+}
+input {
+  -webkit-appearance: none; /* remove default */
+  /* margin: 10px; */
+  width: 20px;
+  height: 20px;
+  border-radius: 12px;
+  vertical-align: sub;
+  cursor: pointer;
+  box-shadow: hsla(0,0%,100%,.15) 0 1px 1px, inset hsla(0,0%,0%,.5) 0 0 0 1px;
+  background-color: hsla(0,0%,0%,.2);
+  background-image: -webkit-radial-gradient( hsla(200,100%,90%,1) 0%, hsla(200,100%,70%,1) 15%, hsla(200,100%,60%,.3) 28%, hsla(200,100%,30%,0) 70% );
+  background-repeat: no-repeat;
+  -webkit-transition: background-position .15s cubic-bezier(.8, 0, 1, 1),
+    -webkit-transform .25s cubic-bezier(.8, 0, 1, 1);
+  outline: none;
+}
+input:checked {
+  -webkit-transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1),
+    -webkit-transform .25s cubic-bezier(0, 0, .2, 1);
+}
+input:active {
+  -webkit-transform: scale(1.5);
+  -webkit-transition: -webkit-transform .1s cubic-bezier(0, 0, .2, 1);
+}
+
+/* The up/down direction logic */
+
+input,
+input:active {
+  background-position: 0 20px;
+}
+input:checked {
+  background-position: 0 0;
+}
+input:checked ~ input,
+input:checked ~ input:active {
+  background-position: 0 -20px;
+}
+
+  /* セレクトボックス */
+.cp_ipselect {
+overflow: hidden;
+/* margin: 0.8em auto; */
+text-align: center;
+/* display: inline-block; */
+}
+.cp_ipselect select {
+width: 100%;
+height: 2em;
+padding-right: 1em;
+cursor: pointer;
+text-indent: 0.01px;
+text-overflow: ellipsis;
+border: none;
+outline: none;
+background: transparent;
+background-image: none;
+box-shadow: none;
+-webkit-appearance: none;
+appearance: none;
+}
+.cp_ipselect select::-ms-expand {
+  display: none;
+}
+.cp_ipselect.cp_sl01 {
+position: relative;
+border: 1px solid #bbbbbb;
+border-radius: 2px;
+background: #ffffff;
+}
+.cp_ipselect.cp_sl01::before {
+position: absolute;
+top: 0.8em;
+right: 0.9em;
+width: 0;
+height: 0;
+padding: 0;
+content: '';
+border-left: 6px solid transparent;
+border-right: 6px solid transparent;
+border-top: 6px solid #666666;
+pointer-events: none;
+}
+.cp_ipselect.cp_sl01 select {
+padding: 3px 38px 3px 8px;
+color: #666666;
+}
+/*左右の開閉ボタン装飾*/
+.hidden_box label.hide {
+  text-align: center;
+  position: relative;
+  padding: 10px;
+  max-width: 100%;
+  max-height: 210px;
+  color: black;
+  background-color: yellow;
+  font-size: 25px;
+  font-weight: bold;
+  outline: 1px solid yellow;
+  writing-mode: vertical-rl;
+  /* text-orientation: upright; */
+  display: inline-block;
+}
+
+.hidden_box label.hide:hover {
+  opacity: 0.8;
+}
+/*チェックは見えなくする*/
+.hidden_box input.hide,input.hide2 {
+  display: none;
+}
+
+/*中身を非表示にしておく*/
+.hidden_box .hidden_show {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+/*クリックで中身表示*/
+.hidden_box input:checked ~ .hidden_show {
+  background-color: rgba(68, 68, 68, 0.562);
+  padding: 10px;
+  height: auto;
+  opacity: 1;
+  margin-top: 20px;
+  max-width: 180px;
+}
+/* ショッピングリンク */
+#shopLink2,#shopLink4 {
+  font-size: 0.8em;
+  text-align: center;
+  margin: 0 auto;
+}
+.shopLink p {
+  margin-top: 20px;
+}
+.shopLink ul {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.shopLink li {
+  margin-right: 10px;
+  margin-top: 10px;
+  width: 43%;
+}
+.shopLink a{
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #00bcd4;
+  color: white;
+  transition: .4s;
+}
+
+.shopLink a:hover {
+  color: #00BCD4;
+  background: #ECECEC;
+}
+
+/* BEAM SHAPEエリア */
+#beamShape {
+  padding: 60px 20px;
+  background-color: white;
+  color: black;
+}
+#beamShapeImg{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#beamShapeImg img{
+  width: 45%;
+}
+
+/* RUN TIME CHARTエリア */
+#runTime {
+  padding: 60px 0;
+}
+#runTimeWrap{
+  max-width: 75%;
+  margin: 0 auto;
+  background-color:whitesmoke;
+  padding:20px;
+}
+
+/* SPECエリア */
+#spec {
+  padding-top: 60px;
+  background-color: white;
+  color: #3c3c3c;
+}
+
+#specBox img {
+  width: 100%;
+  max-width: 430px;
+}
+#specBox dl {
+  text-align: left;
+}
+#specBox dl{
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid darkgrey;
+  font-size: small;
+}
+#specBox dt{
+  width: 30%;
+  float: left;
+  padding: 10px;
+  border-top: 1px solid darkgrey;
+  box-sizing: border-box;
+}
+#specBox dd{
+  margin-left: 30%;
+  padding: 10px;
+  border-left: 1px solid darkgrey;
+  border-top: 1px solid darkgrey;
+  line-height: 1.5em;
+}
+#specBox dd:after{
+  display: block;
+  content: "";
+  clear: both;
+}
+
+@media screen and (max-width: 1200px) {
+#beamShotImg {
+  max-width: 800px;
+  margin: 0 auto;
+}
+}
+@media screen and (max-width: 850px) {
+  /*左右の開閉ボタン装飾*/
+.hidden_box label.hide {
+  padding: 8px;
+  max-width: 100%;
+  max-height: 130px;
+  font-size: 14px;
+}
+#top h2 {
+  top: 30%;
+  font-size: 40px;
+}
+}
+@media screen and (max-height: 450px) {
+#left {
+  top:20px;
+}
+#right {
+  top:20px;
+}
+}
+
+@media screen and (max-width: 650px) {
+#specBox  dt{
+    width: 100%;
+    float: none;
+    background-color: lightgray;
+  }
+  #specBox dd{
+    margin-left: auto;
+    border-left: none;
+  }
+}
+
+@media (min-width:480px){
+  #specBox,#BeamLink {
+    display: flex;
+    width: 100%;
+  }
+  #BeamLink2,#BeamLink4 {
+    width: 50%;
+    padding: 10px;
+  }
+  #SpecList2 {
+    border-right: 1px solid darkgray;
+    padding: 0 30px 20px 60px;
+    width: 50%;
+}
+#SpecList4 {
+  padding: 0 60px 20px 30px;
+  width: 50%;
+}
+}
+
+@media screen and (max-width: 480px) {
+  #imgBox,#beamShape,#runTime,#beamComp,#spec{
+    padding: 30px 0;
+  }
+
+  h3{
+    font-size: 2em;;
+  }
+  #beamCompGraf{
+    margin-bottom: 30px;
+  }
+  #SpecList2 {
+    padding: 0 25px;
+  }
+  #SpecList4 {
+    margin-top: 20px;
+    padding: 0 25px;
+  }
+  #BeamLink2{
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  #BeamLink4 {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  label {
+    display:block;
+  }
+  #top h1{
+    font-size: 12px;
+  }
+  #top h2{
+    top: 23%;
+    font-size: 25px;
+  }
+  p {
+    font-size: 12px;
+  }
+}

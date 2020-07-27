@@ -1,0 +1,61 @@
+/* listページ　listエリア */
+#top li{
+    background-color: black;
+    color: white;
+    padding: 1em;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1em;
+ }
+ #top li a{
+     color: white;
+     text-decoration: none;
+ }
+ #top li a:hover{
+ opacity: 0.5;
+}
+#list {
+    background-color: white;
+    color: black;
+    padding: 0 30px 30px;
+}
+
+   #list h3{
+     font-size: 2em;
+   }
+   
+   /* list ページ　テーブル */
+   .listTbl {
+     font-size: 13px;
+     font-weight: bold;
+     margin-top: 10px;
+     margin-bottom: 30px;
+     width: 100%;
+   }
+   .listTbl img {
+     max-width: 30px;
+     vertical-align: middle;
+     margin-right: 10px;
+   }
+   .listTbl  a {
+        background: #00bcd4;
+        color: white;
+        transition: .4s;
+        padding: 3px 5px;
+        text-decoration: none;
+   }
+   .listTbl  a:hover{
+        color: #00BCD4;
+        background: #ECECEC;
+   }
+   th {
+     background: black;
+     outline: black 1px solid;
+     color: #fff;
+     font-size: 11px;
+     padding: 10px;
+   }
+   td {
+     border-bottom: solid 1px black;
+     padding: 10px;
+   }

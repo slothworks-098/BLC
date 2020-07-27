@@ -1,0 +1,1 @@
+$(function(){ $.ajaxSetup({cache:false}); $("#headInc").load("/header.html"); });

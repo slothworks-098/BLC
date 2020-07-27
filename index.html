@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/twentytwenty.css" rel="stylesheet" type="text/css" />
+    <link href="css/luxbar.css" rel="stylesheet" type="text/css" />
+    <link href="css/luxbar.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="headInc">
+    </div>
+    <section id="top"> 
+        <img src="img/test_.jpg" alt="">
+        <div id="topText">
+            <h1>BLC（BIKE LIGHT CHECKERS）は主要な自転車ライトメーカーやAmazonで人気のライトを比較・検証するサイトです。</h1>
+            <h2>Choose the best light.</h2>
+            <p class="mb30">左右の「LIGHT」ボタンからライトを選択して比較する事ができます。</p>
+        </div>
+    </section>
+    <section id="imgBox">
+        <h3 class="mt10">BEAM SHOT</span></h3>
+        <div class="textArea mb30">
+            <p class="mb10">同じ条件で撮影した照射写真を比較<br>スペックだけではわかりづらい明るさや配光を視覚的に比べることができます。</p>
+            <small>※BEAM SHOTの撮影方法設定についてはこちら</small>
+        </div>
+        <section id="left"  class="hidden_box">
+            <label id="labelName1" class="hide" for="label1">LIGHT 1</label>
+            <input class="hide" type="checkbox" id="label1">
+            <div class="hidden_show">
+                <div class="cp_ipselect cp_sl01">
+                    <select required name="Select1" id="Select1" onchange="SelectChange(this.value,2)">
+                        <option disabled selected>メーカーを選択</option>
+                        <option value="BLACKBURN">BLACKBURN</option>
+                        <option value="Busch+Muller">Busch+Muller</option>
+                        <option value="CATEYE">CATEYE</option>
+                        <option value="GACIRON">GACIRON</option>
+                        <option value="KNOG">KNOG</option>
+                        <option value="LEZYNE">LEZYNE</option>
+                        <option value="LUMINTOP">LUMINTOP</option>
+                        <option value="MOON">MOON</option>
+                        <option value="RAVEMAN">RAVEMAN</option>
+                    </select>
+                </div>
+                <div class="cp_ipselect cp_sl01">
+                    <select disabled name="Select2" id="Select2" onchange="SelectChange2(this.value,2)">
+                        <option>ライトを選択</option>
+                    </select>
+                </div>
+                <div id="shopLink2" class="shopLink"></div>
+            </div>
+
+        </section>
+        <section id="right" class="hidden_box">
+            <label id="labelName2"class="hide" for="label2">LIGHT 2</label>
+            <input class="hide" type="checkbox" id="label2">
+            <div class="hidden_show">
+                <div class="cp_ipselect cp_sl01">
+                    <select name="Select3" id="Select3" onchange="SelectChange(this.value,4)">
+                        <option disabled selected>メーカーを選択</option>
+                        <option value="BLACKBURN">BLACKBURN</option>
+                        <option value="Busch+Muller">Busch+Muller</option>
+                        <option value="CATEYE">CATEYE</option>
+                        <option value="GACIRON">GACIRON</option>
+                        <option value="KNOG">KNOG</option>
+                        <option value="LEZYNE">LEZYNE</option>
+                        <option value="LUMINTOP">LUMINTOP</option>
+                        <option value="MOON">MOON</option>
+                        <option value="RAVEMAN">RAVEMAN</option>
+                    </select>
+                </div>
+                <div class="cp_ipselect cp_sl01">
+                    <select disabled name="Select4" id="Select4" onchange="SelectChange2(this.value,4)">
+                        <option>ライトを選択</option>
+                    </select>
+                </div>
+                <div id="shopLink4" class="shopLink"></div>
+            </div>
+        </section>
+        <div id ="beamShotImg"> 
+            <img id="leftShotImg" name="leftShotImg" src="BRAND/GACIRON/V9C800/V9C800_0.jpg" /> 
+            <img id="rightShotImg" name="rightShotImg" src="BRAND/RAVEMAN/CR700/CR700_0.jpg" /> 
+        </div>
+
+        <div id="BeamLink">
+            <div id="BeamLink2">
+                <label class="changeBtn2"><input type="radio" name="lm">HIGH：----- lm [ -- h]</label>
+                <label class="changeBtn2"><input type="radio" name="lm">MID：----- lm [ -- h]</label>
+                <label class="changeBtn2"><input type="radio" name="lm">LOW：----- lm [ -- h]</label>
+            </div>
+            <div id="BeamLink4">
+                <label class="changeBtn4"><input type="radio" name="lm">HIGH：----- lm [ -- h]</label>
+                <label class="changeBtn4"><input type="radio" name="lm">MID：----- lm [ -- h]</label>
+                <label class="changeBtn4"><input type="radio" name="lm">LOW：----- lm [ -- h]</label>
+            </div>
+        </div>
+    </section>
+    <section id="beamShape">
+        <h3>BEAM SHAPE</h3>
+        <div class="textArea">
+            <p class="mb30">垂直な壁に照射したビームの写真を比較<br>スポット照射やワイド照射、ビームのカットオフなどを確認する事ができます。</p>
+        </div>
+        <div id ="beamShapeImg"> 
+            <img id="leftShapeImg" name="leftShapeImg" src="BRAND/GACIRON/V9C800/V9C800_bsh.jpg" /> 
+            <img id="rightShapeImg" name="rightShapeImg" src="BRAND/RAVEMAN/CR700/CR700_bsh.jpg" /> 
+            <img id="leftSideImg" name="leftSideImg" src="BRAND/RAVEMAN/CR700/CR700_side.jpg" /> 
+            <img id="rightSideImg" name="rightSideImg" src="BRAND/GACIRON/V9C800/V9C800_side.jpg" /> 
+            <img id="leftTopImg" name="leftTopImg" src="BRAND/RAVEMAN/CR700/CR700_top.jpg" /> 
+            <img id="rightTopImg" name="rightTopImg" src="BRAND/RAVEMAN/CR700/CR700_top.jpg" /> 
+        </div>
+    </section>
+    <section id="runTime">
+        <h3>RUN TIME CHART</h3>
+        <div class="textArea mb30">
+            <p class="mb10">バッテリーと明るさの関係を示した折れ線グラフです。<br>最大値を100%とした場合の経過時間ごとの明るさを確認する事ができます。</p>
+            <small>※現在は最大出力時のデータのみ</small>
+        </div>
+        <div id ="runTimeWrap"> 
+            <canvas id="runTimeChart"></canvas>
+        </div>
+    </section>
+    <section id="spec">
+        <h3>SPECS</h3>
+        <div id="specBox">
+            <div id="SpecList2">
+                <img id="leftSpecImg" name="leftSpecImg" src="BRAND/GACIRON/V9C800/V9C800.jpg">
+                <h4 id="specLightName2" class="mt20 mb10">LIGHT1</h4>
+
+                <dl id="list2">
+                    <dt>MAX OUTPUT</dt><dd>800 lm</dd>
+                    <dt>MODE</dt><dd>HIGH 800 lm [3h]<br>MID 400 lm [5h]<br>LOW 200 lm [10h]</dd>
+                    <dt>FLASH MODE</dt><dd>200 lm [6.5h]</dd>
+                    <dt>WEIGHT</dt><dd>140g</dd>
+                    <dt>SIZE</dt><dd>116 x 31.2 x 43.2 mm</dd>
+                    <dt>BATTERY</dt><dd>Li-ion 3.6V 3400mAh</dd>
+                    <dt>RECHARGE TIME</dt><dd>5〜9h</dd>
+                    <dt>WATER RESISTANCE</dt><dd>IPX6</dd>
+                </dl>
+            </div>
+            <div id="SpecList4">
+                <img  id="rightSpecImg" name="rightSpecImg" src="BRAND/RAVEMAN/CR700/CR700.jpg">
+                <h4 id="specLightName4" class="mt20 mb10">LIGHT2</h4>
+                <dl id="list4">  
+                    <dt>MAX OUTPUT</dt><dd>800 lm</dd>
+                    <dt>MODE</dt><dd>HIGH 800 lm [3h]<br>MID 400 lm [5h]<br>LOW 200 lm [10h]</dd>
+                    <dt>FLASH MODE</dt><dd>200 lm [6.5h]</dd>
+                    <dt>WEIGHT</dt><dd>140g</dd>
+                    <dt>SIZE</dt><dd>116 x 31.2 x 43.2 mm</dd>
+                    <dt>BATTERY</dt><dd>Li-ion 3.6V 3400mAh</dd>
+                    <dt>RECHARGE TIME</dt><dd>5〜9h</dd>
+                    <dt>WATER RESISTANCE</dt><dd>IPX6</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+    <footer><small>Copyright (c) BIKE LIGHT CHECKERS</small></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/select.js"></script>
+    <script src="js/inc.js"></script>
+</body>
+</html>
+    
